@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'biblio',
-    template: `
-        <h2> Test Angular </h2>
-    `
+    templateUrl: './biblio.component.html'
 
 
 })
