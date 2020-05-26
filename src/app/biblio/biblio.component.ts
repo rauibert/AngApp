@@ -9,8 +9,13 @@ import { Component } from '@angular/core';
 
 export class BiblioComponent {
     
+    public titleBiblio: string;
+    public list: string;
+
     constructor(){
-        console.log('Loading component');
+        this.titleBiblio = 'Test Angular';
+        
+        console.log('Loading component Biblio');
     };
     
     
