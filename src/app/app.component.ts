@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Configuration } from './models/configuration';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngApp';
+  
+  public title;
+  public description;
+
+  constructor(){
+    this.title = Configuration.title;
+    this.description = Configuration.description;
+  }
+
+
 }
