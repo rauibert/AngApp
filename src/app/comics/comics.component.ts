@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Comic } from '../models/comic';
 
 @Component({
   selector: 'comics',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComicsComponent implements OnInit {
 
-  constructor() { }
+  public comics: Array<Comic>;
+
+  constructor() {
+    this.comics = [
+      new Comic('Spiderman Vuelta a casa','Straczynski', 'Romita Jr.', 2001, true),
+      new Comic ('Hasta que las estrellas se congelen','Straczynski', 'Romita Jr.', 2001, true)
+    ];
+  }
 
   ngOnInit(): void {
+    console.log(this.comics);
   }
 
 }
