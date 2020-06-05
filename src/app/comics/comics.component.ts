@@ -9,8 +9,10 @@ import { Comic } from '../models/comic';
 export class ComicsComponent implements OnInit {
 
   public comics: Array<Comic>;
+  public comicsTitle: string[];
 
   constructor() {
+    this.comicsTitle = new Array();
     this.comics = [
       new Comic('Spiderman Vuelta a casa','Straczynski', 'Romita Jr.', 2001, true),
       new Comic ('Hasta que las estrellas se congelen','Straczynski', 'Romita Jr.', 2001, true),
@@ -20,6 +22,15 @@ export class ComicsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.comics);
+    this.getTitle();
+  }
+
+  getTitle(){
+    this.comics.forEach((comic, index) => {
+      this.comicsTitle.push(comic.title);
+      
+    });
+    console.log(this.comicsTitle);
   }
 
 }

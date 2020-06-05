@@ -2,7 +2,7 @@
 <h3>List of comics</h3>
 <ul>
     <li *ngFor="let comic of comics">
-        {{comic.title}} - {{comic.year}}
+        {{comic.title}} - {{comic.year}} - {{comic.author}}
         <span *ngIf="comic.year == 2020" 
         [style.background]="comic.year == 2020 ? 'green': 'transparent'"
         [style.color]="comic.year == 2020 ? 'white': 'black'">
@@ -10,5 +10,10 @@
         </span>
     </li>
     
+</ul>
+
+<h3>List of titles</h3>
+<ul>
+    <li *ngFor="let title of comicsTitle">{{title}}</li>
 </ul>
 
