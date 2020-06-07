@@ -34,4 +34,9 @@ export class ComicsComponent implements OnInit {
     console.log(this.comicsTitle);
   }
 
+  addTitle(){
+    this.comicsTitle.push(this.newTitle);
+  }
+
+
 }
