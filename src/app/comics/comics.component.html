@@ -12,6 +12,10 @@
     
 </ul>
 
+<p>Add titles</p>
+<p><input type="text" [(ngModel)]="newTitle"></p>
+<p>{{ newTitle }}</p>
+
 <h3>List of titles</h3>
 <ul>
     <li *ngFor="let title of comicsTitle">{{title}}</li>

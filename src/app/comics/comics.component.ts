@@ -10,6 +10,7 @@ export class ComicsComponent implements OnInit {
 
   public comics: Array<Comic>;
   public comicsTitle: string[];
+  public newTitle: string;
 
   constructor() {
     this.comicsTitle = new Array();
