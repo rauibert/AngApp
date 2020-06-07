@@ -38,5 +38,10 @@ export class ComicsComponent implements OnInit {
     this.comicsTitle.push(this.newTitle);
   }
 
+  removeTitle(index){
+    //delete this.comics[index];
+    this.comics.splice(index, 1);
+  }
+
 
 }
