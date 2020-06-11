@@ -4,9 +4,9 @@
     <h2>{{ description }}</h2>
 
     <nav>
-        <a [routerLink]="['/']">Home</a>
-        <a [routerLink]="['/biblio']">Books</a>
-        <a [routerLink]="['/comics']">Comics</a>
+        <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
+        <a [routerLink]="['/biblio']" [routerLinkActive]="['active']">Books</a>
+        <a [routerLink]="['/comics']" [routerLinkActive]="['active']">Comics</a>
     </nav>
 
     <!--<biblio></biblio>-->

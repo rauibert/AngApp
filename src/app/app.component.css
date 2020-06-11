@@ -1,8 +1,13 @@
 
 a{
-    padding: 10px;
-    margin: 5px;
+    padding: 5px;
+    margin: 2px;
     border: solid black 1px;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: blue 1px;
+    text-decoration: none;
+}
+
+.active{
+    background: rgb(26, 177, 164);
 }
