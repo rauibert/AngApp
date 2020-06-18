@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'comics', component: ComicsComponent},
   {path: 'biblio', component: BiblioComponent},
+  {path: 'biblio/:book', component: BiblioComponent},
   {path: '**', component: HomeComponent}
 ];
 
