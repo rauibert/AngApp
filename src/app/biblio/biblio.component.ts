@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'biblio',
@@ -7,24 +7,28 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class BiblioComponent implements OnInit{
-    
+    public book: string;
     public titleBiblio: string;
     public list: string;
 
     constructor(
-        private _route: ActivatedRoute
+        private _route: ActivatedRoute,
+        private router: Router
     ){
        this.titleBiblio = 'Test Angular';
-        
+
     }
 
     ngOnInit(): void {
         this._route.paramMap.subscribe(params =>{
-            console.log(params.get('book'));
-        })        
+            this.book = params.get('book');
+        })
 
         //console.log('Loading component Biblio');
     }
-    
-    
+
+    redirect(){
+        this.router.navigate(['/comics']);
+    }
+
 }
