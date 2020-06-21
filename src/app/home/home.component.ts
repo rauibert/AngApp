@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public flag: boolean;
 
-  constructor() { }
+  constructor() { 
+    this.flag = false;
+  }
 
   ngOnInit(): void {
+  }
+
+  setFlag(){
+    this.flag = true;
   }
 
 }
