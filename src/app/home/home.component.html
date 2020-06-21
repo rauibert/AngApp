@@ -1,8 +1,10 @@
 <h2>Main page</h2>
 
-<div *ngIf="flag; else noFlag">
+<div *ngIf="flag; then yesFlag else noFlag"></div>
+
+<ng-template #yesFlag>
     <h3>User permitted</h3>
-</div>
+</ng-template>
 
 <ng-template #noFlag>
     <h3>Wrong user</h3>
