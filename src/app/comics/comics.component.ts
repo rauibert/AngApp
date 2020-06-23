@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Comic } from '../models/comic';
+import { ComicService } from '../services/comic.service';
 
 @Component({
   selector: 'comics',
   templateUrl: './comics.component.html',
-  styleUrls: ['./comics.component.css']
+  styleUrls: ['./comics.component.css'],
+  providers: [ComicService]
 })
 export class ComicsComponent implements OnInit {
 
@@ -12,13 +14,12 @@ export class ComicsComponent implements OnInit {
   public comicsTitle: string[];
   public newTitle: string;
 
-  constructor() {
+  constructor(
+    private _comicService: ComicService
+  ) {
+    this.comics = this._comicService.getComics();
     this.comicsTitle = new Array();
-    this.comics = [
-      new Comic('Spiderman Vuelta a casa','Straczynski', 'Romita Jr.', 2001, true),
-      new Comic ('Hasta que las estrellas se congelen','Straczynski', 'Romita Jr.', 2001, false),
-      new Comic ('Spiderman 2020','Straczynski', 'Romita Jr.', 2020, true)
-    ];
+    
   }
 
   ngOnInit(): void {
