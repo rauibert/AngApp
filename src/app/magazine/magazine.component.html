@@ -1,6 +1,8 @@
 
 <h3>User</h3>
 
+<label for="userId"> Insert an userId </label><input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()" />
+
 <div id="userbox" *ngIf="user">   
     <div id = "avatar"><img src="{{ user.avatar }}" alt=""></div>
     <div id="userdata"> 
