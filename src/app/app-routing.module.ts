@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ComicsComponent } from './comics/comics.component';
 import { BiblioComponent } from './biblio/biblio.component';
 import { HomeComponent } from './home/home.component';
+import { MagazineComponent } from './magazine/magazine.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'comics', component: ComicsComponent},
   {path: 'biblio', component: BiblioComponent},
   {path: 'biblio/:book', component: BiblioComponent},
+  {path: 'magazines', component: MagazineComponent},
   {path: '**', component: HomeComponent}
 ];
 
