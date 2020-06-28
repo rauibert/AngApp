@@ -1,0 +1,18 @@
+
+#userbox{
+    border: grey 1px solid;
+    box-shadow: grey 2px 5px;
+    margin: 2px;
+    width: auto;
+}
+
+#avatar{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+#userdata{
+    display: inline-block;
+    margin: 2px;
+}

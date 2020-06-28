@@ -9,6 +9,8 @@ import { RequestsService } from '../services/requests.service';
 })
 export class MagazineComponent implements OnInit {
 
+  public user: any;
+
   constructor(
     private _requestsService: RequestsService
   ) { }
@@ -16,7 +18,7 @@ export class MagazineComponent implements OnInit {
   ngOnInit(): void {
       this._requestsService.getUser().subscribe(
         result =>{
-          console.log(result);
+          this.user = result.data;
         },
         error =>{
           console.log(error);
