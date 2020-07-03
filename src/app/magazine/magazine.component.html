@@ -1,6 +1,9 @@
 
-<h3>User</h3>
 
+<h3>User</h3>
+<hr>
+{{ dateData | date: 'fullDate'}}
+<hr>
 <label for="userId"> Insert an userId </label><input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()" />
 
 <div id="userbox" *ngIf="user">   

@@ -11,6 +11,7 @@ export class MagazineComponent implements OnInit {
 
   public user: any;
   public userId: number;
+  public dateData: any;
 
   constructor(
     private _requestsService: RequestsService
@@ -19,6 +20,7 @@ export class MagazineComponent implements OnInit {
   }
 
   ngOnInit(): void {
+      this.dateData = new Date();
       this.loadUser();
   }
 
