@@ -10,13 +10,16 @@ import { ComicsComponent } from './comics/comics.component';
 import { HomeComponent } from './home/home.component';
 import { MagazineComponent } from './magazine/magazine.component';
 
+import { CalculatorPipe } from './pipes/calculator.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     BiblioComponent,
     ComicsComponent,
     HomeComponent,
-    MagazineComponent
+    MagazineComponent,
+    CalculatorPipe
   ],
   imports: [
     BrowserModule,

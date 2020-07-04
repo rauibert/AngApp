@@ -2,6 +2,8 @@
 
 <h3>User</h3>
 <hr>
+{{ 28 | calculator: 12 }} <!--New pipe calculator-->
+<hr>
 {{ dateData | date: 'fullDate'}}
 <hr>
 <label for="userId"> Insert an userId </label><input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()" />
