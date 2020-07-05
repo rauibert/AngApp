@@ -1,0 +1,13 @@
+input, textarea{
+    margin: 2px;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+label{
+    width: 70px;
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+    vertical-align: middle;
+}
