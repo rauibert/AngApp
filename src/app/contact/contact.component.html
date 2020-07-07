@@ -13,5 +13,5 @@
     <label for="message">Message</label><textarea name="message" #message="ngModel" [(ngModel)]="userContact.message" required></textarea>
     <span *ngIf="message.touched && !message.valid">The message is not valid</span>
     <br/>
-    <input type="submit" value="Send">
+    <input type="submit" value="Send" [disabled]="!contactForm.form.valid" />
 </form>
