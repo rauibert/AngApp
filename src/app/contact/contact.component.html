@@ -2,10 +2,16 @@
 
 <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
     <label for="first_name">First name</label><input type="text" name="first_name" #first_name="ngModel" [(ngModel)]="userContact.first_name" required pattern="[a-zA-Z]+" />
-    <span *ngIf="first_name.touched && !first_name.valid">The name is not valid</span>
+    <span *ngIf="first_name.touched && !first_name.valid">The first name is not valid</span>
     <br/>
-    <label for="last_name">Last name</label><input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="userContact.last_name" required/><br/>
-    <label for="email">Email</label><input type="text" name="email" #email="ngModel" [(ngModel)]="userContact.email" required/><br/>
-    <label for="message">Message</label><textarea name="message" #message="ngModel" [(ngModel)]="userContact.message" required></textarea><br/>
+    <label for="last_name">Last name</label><input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="userContact.last_name" required pattern="[a-zA-Z]+" />
+    <span *ngIf="last_name.touched && !last_name.valid">The last name is not valid</span>
+    <br/>
+    <label for="email">Email</label><input type="email" name="email" #email="ngModel" [(ngModel)]="userContact.email" required/>
+    <span *ngIf="email.touched && !email.valid">The email is not valid</span>
+    <br/>
+    <label for="message">Message</label><textarea name="message" #message="ngModel" [(ngModel)]="userContact.message" required></textarea>
+    <span *ngIf="message.touched && !message.valid">The message is not valid</span>
+    <br/>
     <input type="submit" value="Send">
 </form>
