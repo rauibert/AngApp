@@ -1,9 +1,11 @@
 <h2>Contact</h2>
 
 <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
-    <label for="first_name">First name</label><input type="text" name="first_name" #first_name="ngModel" [(ngModel)]="userContact.first_name" /><br/>
-    <label for="last_name">Last name</label><input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="userContact.last_name" /><br/>
-    <label for="email">Email</label><input type="text" name="email" #email="ngModel" [(ngModel)]="userContact.email" /><br/>
-    <label for="message">Message</label><textarea name="message" #message="ngModel" [(ngModel)]="userContact.message" ></textarea><br/>
+    <label for="first_name">First name</label><input type="text" name="first_name" #first_name="ngModel" [(ngModel)]="userContact.first_name" required pattern="[a-zA-Z]+" />
+    <span *ngIf="first_name.touched && !first_name.valid">The name is not valid</span>
+    <br/>
+    <label for="last_name">Last name</label><input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="userContact.last_name" required/><br/>
+    <label for="email">Email</label><input type="text" name="email" #email="ngModel" [(ngModel)]="userContact.email" required/><br/>
+    <label for="message">Message</label><textarea name="message" #message="ngModel" [(ngModel)]="userContact.message" required></textarea><br/>
     <input type="submit" value="Send">
 </form>
