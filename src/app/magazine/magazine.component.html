@@ -5,6 +5,32 @@
 {{ 28 | calculator: 12 }} <!--New pipe calculator-->
 <hr>
 {{ dateData | date: 'fullDate'}}
+
+
+<hr>
+<h3>Create user</h3>
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <p>
+        <label for="name">Name </label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="new_user.name" required/>
+    </p>
+
+    <p>
+        <label for="job">Job </label>
+        <input type="text" name="job" #job="ngModel" [(ngModel)]="new_user.job" required/>
+    </p>
+
+    <input type="submit" value="Save user" [disabled]="!newUser.form.valid">
+
+</form>
+
+<div *ngIf="saved_user">
+    <h4>Save user</h4>
+    <p>Name: {{ saved_user.name }}</p>
+    <p>Job: {{ saved_user.job }}</p>
+</div>
+
+
 <hr>
 <label for="userId"> Insert an userId </label><input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()" />
 
@@ -16,3 +42,4 @@
         <b>Email:</b> {{ user.email }}
     </div>
 </div>
+
